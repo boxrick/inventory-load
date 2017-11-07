@@ -1,0 +1,5 @@
+---
+- name: include host vars
+  include_vars:
+    file: "{{ inventory_dir }}/{{ variables_path_last_loaded }}/{{ inventory_hostname }}.yml"
+  failed_when: false

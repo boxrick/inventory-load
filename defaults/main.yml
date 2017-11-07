@@ -1,0 +1,10 @@
+---
+# name: inventory-load
+# description: Load in vars in a custom order
+#------------------------------------------------------------------------------
+# Variables
+#------------------------------------------------------------------------------
+
+variables_path_first_loaded: "group_vars"
+variables_path_last_loaded: "host_vars"
+variables_path_list: [ location_vars, hardware_vars ]

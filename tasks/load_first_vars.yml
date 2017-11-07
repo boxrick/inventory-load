@@ -1,0 +1,6 @@
+---
+- name: include first defined vars - loading "{{ inventory_dir }}/{{ variables_path_first_loaded }}/{{ item }}.yml"
+  include_vars:
+    file: "{{ inventory_dir }}/{{ variables_path_first_loaded }}/{{ item }}.yml"
+  with_items: "{{ group_names }}"
+  failed_when: false

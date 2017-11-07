@@ -1,0 +1,12 @@
+---
+# role: inventory-load
+# description: Load in vars files in specific order
+
+- include_tasks: load_first_vars.yml
+
+- include_tasks: load_vars.yml
+  with_items: "{{ variables_path_list }}"
+  loop_control:
+     loop_var: "includes"
+
+- include_tasks: load_last_vars.yml
